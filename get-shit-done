@@ -32,9 +32,13 @@ if (file_exists($iniFile)) {
 	);
 }
 
+$uname = trim(`uname`);
+if( 'Darwin' == $uname ){
+    $restartNetworkingCommand = 'ifconfig en0 down; ifconfig en0 up;';
+} else {
+    $restartNetworkingCommand = '/etc/init.d/networking restart';
+}
 
-$restartNetworkingCommand = 'ifconfig en0 down; ifconfig en0 up;';
-#$restartNetworkingCommand = '/etc/init.d/networking restart';
 $hostsFile = '/etc/hosts';
 $startToken = '## start-gsd';
 $endToken = '## end-gsd';
