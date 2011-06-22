@@ -27,11 +27,14 @@ if (file_exists($iniFile)) {
 		'friendster.com', 'hi5.com', 'linkedin.com',
 		'livejournal.com', 'meetup.com', 'myspace.com',
 		'plurk.com', 'stickam.com', 'stumbleupon.com',
-		'yelp.com', 'slashdot.org'
+        'yelp.com', 'slashdot.org',
+        'samachar.com', 'hindu.com'
 	);
 }
 
-$restartNetworkingCommand = '/etc/init.d/networking restart';
+
+$restartNetworkingCommand = 'ifconfig en0 down; ifconfig en0 up;';
+#$restartNetworkingCommand = '/etc/init.d/networking restart';
 $hostsFile = '/etc/hosts';
 $startToken = '## start-gsd';
 $endToken = '## end-gsd';
