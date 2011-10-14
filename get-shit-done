@@ -28,7 +28,7 @@ if (file_exists($iniFile)) {
 		'livejournal.com', 'meetup.com', 'myspace.com',
 		'plurk.com', 'stickam.com', 'stumbleupon.com',
         'yelp.com', 'slashdot.org',
-        'samachar.com', 'hindu.com'
+        'samachar.com', 'hindu.com', 'slickdeals.net', 'woot.com'
 	);
 }
 
